@@ -7,9 +7,10 @@ Jquery placeholder plugin to make it possible to have a default text description
 <input id="example-textfield" name="example-freetext" class="text placeholder" type="text" value="My defalt value here" />
 
 // JS Example
-
+<code>
 $.placeholder({
     selector: '.placeholder',
     focusClass: 'focus',
     blurClass: 'blur'
 });
+</code>
