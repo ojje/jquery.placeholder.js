@@ -11,6 +11,9 @@
 
 		/* Merge the defaults with the user provided options */
 		var options = $.extend({}, defaults, options);
+    
+    /* Add default class to all components */
+    $(options.selector).addClass(options.defaultClass);
 
 		/* Add a delegate event to the body to be able to bind to elements added later to the DOM */
 		
