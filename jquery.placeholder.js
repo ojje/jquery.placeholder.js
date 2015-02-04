@@ -1,5 +1,8 @@
 (function($) {
+  "use strict";
+  
 	$.placeholder = function(options) {
+    
 		/* Set our default settings */
 		var defaults = {
 			selector: '.placeholder',
@@ -14,9 +17,8 @@
     
     /* Add default class to all components */
     $(options.selector).addClass(options.defaultClass);
-
-		/* Add a delegate event to the body to be able to bind to elements added later to the DOM */
-		
+    
+    /* Focus event */
 		$(document).on('focusin', options.selector, function() {
 			if (options.focusClass !== false) {
 				$(this).addClass(options.focusClass).removeClass(options.defaultClass);
@@ -30,7 +32,7 @@
         this.value = '';
       } 
       
-      
+    /* Blur event */
 		}).on('focusout', options.selector, function() {
 			if (options.focusClass !== false) {
 				$(this).removeClass(options.focusClass);
@@ -42,9 +44,9 @@
 
 			if ($.trim(this.value) == '') {
         if ($(this).parents('form').hasClass('validated')) {
-          	this.value = $(this).data('error');
+        	this.value = $(this).data('error');
         } else {
-          	this.value = this.defaultValue;
+        	this.value = this.defaultValue;
         }
 			
         $(this).removeClass(options.blurClass).addClass(options.defaultClass);
