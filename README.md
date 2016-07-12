@@ -1,7 +1,7 @@
 jquery.placeholder.js
 =====================
 
-Jquery placeholder plugin to make it possible to have a default text description in a textfield and remove/add default text on focus/blur.
+Jquery placeholder plugin to fix support for the placeholder attribute on input text elements for old browsers like Internet Explorer 8-9.
 
 ### Html example
 ```html
